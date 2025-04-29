@@ -1,56 +1,25 @@
-# Welcome to your Lovable project
 
-## Project info
+# Luxury Shoes
 
-**URL**: https://lovable.dev/projects/da8c4088-0f48-4675-9bd7-c71190ad0730
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/da8c4088-0f48-4675-9bd7-c71190ad0730) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## How to run the project locally
 
 Follow these steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
+# Step 2: Navigate to the project directory
 cd <YOUR_PROJECT_NAME>
 
-# Step 3: Install the necessary dependencies.
+# Step 3: Install the necessary dependencies
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
+## Project technologies
 
 This project is built with:
 
@@ -60,14 +29,49 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/da8c4088-0f48-4675-9bd7-c71190ad0730) and click on Share -> Publish.
+To deploy this project, run:
 
-## Can I connect a custom domain to my Lovable project?
+```sh
+npm run build
+```
 
-Yes, you can!
+And upload the contents of the `dist` folder to your hosting provider of choice.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Custom domain setup
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+To connect a custom domain, update your DNS settings with your domain registrar to point to your hosting provider.
+
+```
+
+Now, let's update the metadata in the index.html file, removing Lovable mentions while preserving the required script:
+
+<lov-write file_path="index.html">
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boutique de chaussures de luxe – Luxury Shoes</title>
+    <meta name="description" content="Vente de chaussures élégantes et haut de gamme. Livraison rapide et style assuré." />
+    <meta name="author" content="Luxury Shoes" />
+
+    <meta property="og:title" content="Boutique de chaussures de luxe – Luxury Shoes" />
+    <meta property="og:description" content="Vente de chaussures élégantes et haut de gamme. Livraison rapide et style assuré." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/lovable-uploads/886b06a2-43e6-4f0a-8448-64ffe287cf29.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@luxury_shoes" />
+    <meta name="twitter:image" content="/lovable-uploads/886b06a2-43e6-4f0a-8448-64ffe287cf29.png" />
+    <link rel="icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
