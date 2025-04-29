@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Instagram, TikTok, Mail, Phone, MapPin } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin, Music } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 
 interface ContactSectionProps {
@@ -162,7 +162,7 @@ const ContactSection = ({ fullPage = false }: ContactSectionProps) => {
                   rel="noopener noreferrer"
                   className="bg-luxury-black border border-luxury-gold/50 text-luxury-gold w-12 h-12 rounded-full flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-black transition-colors"
                 >
-                  <TikTok />
+                  <Music />
                 </a>
               </div>
             </div>

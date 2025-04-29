@@ -1,6 +1,4 @@
 
-import { fullPage } from "date-fns/locale";
-
 interface AboutSectionProps {
   fullPage?: boolean;
 }
